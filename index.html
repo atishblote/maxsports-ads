@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Liter&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+        .primary-btn {
+            background-color: #e6cd1e;
+            border-color: #cea311;
+            border-style: solid;
+            color: #000;
+        }
+
+        .bg-button {
+            background: linear-gradient(45deg, #eeec26, #c9990e);
+            color: #000 !important;
+            font-weight: 700;
+            transition: .2s ease-in-out;
+        }
+
+        .max_w_screen_xl {
+            max-width: 1460px;
+        }
+
+        body {
+            font-family: "Mulish", serif;
+            background-color: black;
+            /* background-position: 0px 36px;
+            background-repeat: no-repeat; */
+        }
+        .hero_button {
+            position: absolute;
+            bottom: 0;
+            left: 69px;
+            bottom: 15px;
+            height: 44px;
+            width: 40%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+        .hero_img img {
+            height: 86vh;
+            overflow: hidden;
+            width: 100%;
+            object-fit: cover;
+            object-position: left;
+        }
+        .hero_button a {
+                line-height: 1.2rem;
+                font-weight: 900;
+            }
+            .desktop{
+                display: block;
+            }
+            .mobile{
+                display: none;
+            }
+
+            @media screen and (max-width: 768px) {
+                .desktop{
+                    display: none;
+                }
+                .mobile{
+                    display: block;
+                } 
+                .hero_img img {
+                    height: unset;
+                    overflow: unset;
+                    width: 100%;
+                    object-fit: unset;
+                    object-position: unset;
+                }
+                .hero_button {
+                    position: unset;
+                    bottom: 0;
+                    left: 69px;
+                    bottom: 15px;
+                    height: unset;
+                    width: 100%;
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+    </style>
+</head>
+
+<body >
+    <div class="gs_main_header">
+        <nav class="border-gray-200 bg-gray-950">
+            <div class="max_w_screen_xl flex flex-wrap items-center justify-between mx-auto p-2 md:p-4">
+                <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse"><img
+                        src="https://res.cloudinary.com/dnagrjvtq/image/upload/v1735659309/max-logo_qfokmn.png"
+                        width="150" alt="masports" class="h-15"></a>
+                <div class="pr-6">
+                    <a class="primary-btn px-10 py-3 text-sm uppercase font-semibold rounded-md bg-button"
+                        href="https://maxsports99.com/">Sign Up</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="hero_img desktop">
+        <img class="img-full"  src="./landing-page-bg.jpg" alt="hero image">
+    </div>
+    <div class="hero_img mobile">
+        <img class="img-full"  src="./landing-pagemobile.jpg" alt="hero image">
+    </div>
+    <div class="hero_button hover:animate-bounce" >
+        <a class="primary-btn px-10  py-3 text-xl uppercase font-semibold rounded-md bg-button"
+        href="https://maxsports99.com/">Play Now</a> 
+    </div>
+</body>
+
+</html>
